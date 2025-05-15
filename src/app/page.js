@@ -29,8 +29,13 @@ export default function Home() {
       } else {
         setResult(data.text);
       }
-    } catch (err) {
-      setError("Request failed");
+    try {
+  // your code
+} catch (err) {
+  console.error(err); // <-- Use err here
+  // handle error or show fallback UI
+}
+
     } finally {
       setLoading(false);
     }
